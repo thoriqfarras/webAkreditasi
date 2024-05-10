@@ -18,5 +18,4 @@ yarn-error.log
 /.idea
 /.vscode
 /webAkreditasiTemplate
-/public/assets
-/public/forms
+/public/assets/vendor
