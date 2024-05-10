@@ -76,6 +76,14 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const tables = document.querySelectorAll('.datatable-container');
+    if (tables) {
+      tables.forEach(table => {
+        table.classList.add('table-responsive')
+      })
+    }
+  </script>
 
 </body>
 
