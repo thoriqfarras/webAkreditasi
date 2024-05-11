@@ -31,7 +31,7 @@
                   @endif
                 @endforeach
               </td>
-              <td>{{ $research['Judul Penelitian'] }}</td>
+              <td>{{ $research['Judul'] }}</td>
               <td>{{ $research['Skema/Sumber Dana'] }}</td>
               <td>{{ $research['Dana'] }}</td>
               <td>{{ $research['Tahun'] }}</td>

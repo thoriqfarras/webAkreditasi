@@ -13,7 +13,7 @@ class PenelitianController extends Controller
         [
           "Nama Dosen" => ["Kholiq Budiman", "Faris Al-Hakim"],
           "Nama Mahasiswa" => ["Nabil Mutawakkil Qisthi", "Novi Fitri Rahayu"],
-          "Judul Penelitian" => "Penelitian X",
+          "Judul" => "Penelitian X",
           "Skema/Sumber Dana" => "Penyedia Jasa X",
           "Dana" => "Rp20.000.000",
           "Tahun" => 2024
@@ -21,7 +21,7 @@ class PenelitianController extends Controller
         [
           "Nama Dosen" => ["Yahya Nur Ifriza", "Jumanto"],
           "Nama Mahasiswa" => ["Farhan Fahreza Ramadhan", "Teguh Kukuh Dwi Cahyo"],
-          "Judul Penelitian" => "Penelitian Y",
+          "Judul" => "Penelitian Y",
           "Skema/Sumber Dana" => "Penyedia Jasa Z",
           "Dana" => "Rp30.000.000",
           "Tahun" => 2022
@@ -29,7 +29,7 @@ class PenelitianController extends Controller
         [
           "Nama Dosen" => ["Endang Sugiharti"],
           "Nama Mahasiswa" => ["Fathimah Az Zahra Sanjani"],
-          "Judul Penelitian" => "Penelitian Z",
+          "Judul" => "Penelitian Z",
           "Skema/Sumber Dana" => "Penyedia Jasa Z",
           "Dana" => "Rp33.000.000",
           "Tahun" => 2023
@@ -37,7 +37,7 @@ class PenelitianController extends Controller
         [
           "Nama Dosen" => ["Alamsyah", "Anggyi Trisnawan Putra"],
           "Nama Mahasiswa" => ["Almaas Izdihar Sant", "Karindra Rafi Linux Hirarki"],
-          "Judul Penelitian" => "Penelitian A",
+          "Judul" => "Penelitian A",
           "Skema/Sumber Dana" => "Penyedia Jasa A",
           "Dana" => "Rp15.000.000",
           "Tahun" => 2021
@@ -45,19 +45,19 @@ class PenelitianController extends Controller
         [
           "Nama Dosen" => ["Budi Prasetiyo", "Abas Setiawan"],
           "Nama Mahasiswa" => ["Muhammad Haikal", "Yopi Julia Nurriski"],
-          "Judul Penelitian" => "Penelitian B",
+          "Judul" => "Penelitian B",
           "Skema/Sumber Dana" => "Penyedia Jasa B",
           "Dana" => "Rp10.000.000",
           "Tahun" => 2024
         ],
       ];
 
-      // - kolom: no, nama dosen, nama mahasiswa, judul penelitian, skema/sumber dana, dana, tahun, download laporan
+      // - kolom: no, nama dosen, nama mahasiswa, judul, skema/sumber dana, dana, tahun, download laporan
       return view('penelitian', [
         'title' => 'Penelitian',
         'tableName' => 'Tabel Penelitian',
         'titleTableRekap' => 'Tabel Rekap Penelitian',
-        'currentYear' => 2024,
+        'titleTableJumlah' => 'Tabel Jumlah Rekap Penelitian',
         'mainData' => $penelitian,
       ]);
     }

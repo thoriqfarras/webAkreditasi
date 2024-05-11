@@ -336,21 +336,39 @@
     const secondRow = rekapHead.querySelector("tr");
     const firstRow = document.createElement("tr");
     rekapHead.insertBefore(firstRow, secondRow);
-    let year = new Date().getFullYear();
+    let rekapYear = new Date().getFullYear();
+    // console.log(secondRow);
     for (let i = 0; i < 7; i += 1) {
         const tHead = document.createElement("th");
         tHead.setAttribute("scope", "colgroup");
         if (i > 1) {
-            tHead.innerText = year;
+            tHead.innerText = rekapYear;
             tHead.setAttribute("colspan", 2);
-            year -= 1;
+            rekapYear -= 1;
         } else {
             tHead.setAttribute("colspan", 1);
         }
-        console.log(tHead);
+        // console.log(tHead);
         firstRow.appendChild(tHead);
     }
 
+    const jumlahRekapHead = document
+        .querySelector("#tabel-jumlah-rekap")
+        .querySelector("thead");
+    const jmlhSecondRow = jumlahRekapHead.querySelector("tr");
+    const jmlhFirstRow = document.createElement("tr");
+    jumlahRekapHead.insertBefore(jmlhFirstRow, jmlhSecondRow);
+    let jmlhRekapYear = new Date().getFullYear();
+    for (let i = 0; i < 5; i += 1) {
+        const tHead = document.createElement("th");
+        tHead.setAttribute("scope", "colgroup");
+        tHead.innerText = jmlhRekapYear;
+        tHead.setAttribute("colspan", 2);
+        jmlhRekapYear -= 1;
+
+        console.log(tHead);
+        jmlhFirstRow.appendChild(tHead);
+    }
     /**
      * Autoresize echart charts
      */

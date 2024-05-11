@@ -16,6 +16,8 @@
 
               @include('partials.tabelRekap')
 
+              @include('partials.tabelRekapJumlah')
+
             </div>
           </div>
         </section>
