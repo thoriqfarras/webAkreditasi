@@ -52,6 +52,11 @@ class PenelitianController extends Controller
         ],
       ];
 
+      $tahun = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+      $prodi = ["Teknik Informatika", "Sistem Informasi"];
+      $dosen = ["Kholiq Budiman", "Faris Al-Hakim","Yahya Nur Ifriza", "Jumanto","Endang Sugiharti","Alamsyah", "Anggyi Trisnawan Putra","Budi Prasetiyo", "Abas Setiawan"];
+
+
       // - kolom: no, nama dosen, nama mahasiswa, judul, skema/sumber dana, dana, tahun, download laporan
       return view('penelitian', [
         'title' => 'Penelitian',
@@ -59,6 +64,9 @@ class PenelitianController extends Controller
         'titleTableRekap' => 'Tabel Rekap Penelitian',
         'titleTableJumlah' => 'Tabel Jumlah Rekap Penelitian',
         'mainData' => $penelitian,
+        'tahun' => $tahun,
+        'prodi' => $prodi,
+        'dosen' => $dosen
       ]);
     }
 }

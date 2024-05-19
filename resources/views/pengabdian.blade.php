@@ -8,19 +8,19 @@
 
         <section class="section">
           <div class="row">
-            <div class="col-lg-12">
-
-              @include('partials.filter')
-
-              @include('partials.table')
-
-              @include('partials.tabelRekap')
-
-              @include('partials.tabelRekapJumlah')
-
+            <div class="main-flex col-lg-12">
+              <div class="col-3">
+                @include('partials.filter')
+              </div>
+              <div class="col-9">
+                @include('partials.table')
+                
+                @include('partials.tabelRekap')
+                
+                @include('partials.tabelRekapJumlah')
+              </div>
             </div>
           </div>
         </section>
 
   </main>
-@endcontainer

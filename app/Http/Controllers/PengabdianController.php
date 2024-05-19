@@ -51,12 +51,19 @@ class PengabdianController extends Controller
           ],
         ];
         
+      $tahun = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+      $prodi = ["Teknik Informatika", "Sistem Informasi"];
+      $dosen = ["Kholiq Budiman", "Faris Al-Hakim","Yahya Nur Ifriza", "Jumanto","Endang Sugiharti","Alamsyah", "Anggyi Trisnawan Putra","Budi Prasetiyo", "Abas Setiawan"];
+        
         return view('pengabdian', [
           'title' => 'Pengabdian',
           'tableName' => 'Tabel Pengabdian',
           'titleTableRekap' => 'Tabel Rekap Pengabdian',
           'titleTableJumlah' => 'Tabel Jumlah Rekap Pengabdian',
-          "mainData" => $pengabdian
+          "mainData" => $pengabdian,
+          'tahun' => $tahun,
+          'prodi' => $prodi,
+          'dosen' => $dosen
         ]);
       }
 }

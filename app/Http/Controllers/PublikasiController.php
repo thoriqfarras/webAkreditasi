@@ -49,13 +49,21 @@ class PublikasiController extends Controller
           "Tahun" => 2024
         ],
       ];
+      
+      $tahun = [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024];
+      $prodi = ["Teknik Informatika", "Sistem Informasi"];
+      $dosen = ["Kholiq Budiman", "Faris Al-Hakim","Yahya Nur Ifriza", "Jumanto","Endang Sugiharti","Alamsyah", "Anggyi Trisnawan Putra","Budi Prasetiyo", "Abas Setiawan"];
+
         return view('publikasi', [
           'title' => 'Publikasi',
           'tableName' => 'Tabel Publikasi',
           'publikasi' => 'publikasi',
           'titleTableRekap' => 'Tabel Rekap Publikasi',
           'titleTableJumlah' => 'Tabel Jumlah Rekap Publikasi',
-          'mainData' => $pengabdian
+          'mainData' => $pengabdian,
+          'tahun' => $tahun,
+          'prodi' => $prodi,
+          'dosen' => $dosen
         ]);
       }
 }
