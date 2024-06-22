@@ -369,6 +369,7 @@
         console.log(tHead);
         jmlhFirstRow.appendChild(tHead);
     }
+
     /**
      * Autoresize echart charts
      */

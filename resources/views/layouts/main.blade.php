@@ -83,6 +83,57 @@
         table.classList.add('table-responsive')
       })
     }
+
+    //bagian filter
+    const formTahunAwal = document.querySelector('#formTahunAwal');
+    const formTahunAkhir = document.querySelector('#formTahunAkhir'); // Perbaiki selektor ID
+    const formProdi = document.querySelector('#formProdi');
+    const formDosen = document.querySelector('#formDosen');
+    const formButton = document.querySelector("#formButton");
+
+    
+    formButton.addEventListener("click", function () {
+    const TahunAwal = formTahunAwal.value;
+    const TahunAkhir = formTahunAkhir.value;
+    const Dosen = formDosen.value;
+
+    const tbody = document.querySelector('.table.datatable.datatable-table tbody');
+    const rows = tbody.querySelectorAll('tr');
+
+    rows.forEach(row => {
+        row.style.display = 'table-row';
+    });
+
+    if (TahunAwal && TahunAkhir && TahunAwal > TahunAkhir) {
+        alert('Tahun tidak sesuai');
+        return; 
+    }
+
+    rows.forEach(row => {
+        const dosenCell = row.querySelector('td:nth-child(1)');
+        const tahunCell = row.querySelector('td:nth-child(6)');
+
+        const dosenDicari = dosenCell.textContent.trim();
+        const tahunDicari = parseInt(tahunCell.textContent.trim());
+
+        if ((TahunAwal && tahunDicari < TahunAwal) || (TahunAkhir && tahunDicari > TahunAkhir)) {
+            row.style.display = 'none';
+        }
+
+        if (Dosen && !dosenDicari.includes(Dosen)) {
+            row.style.display = 'none';
+        }
+    });
+
+    const rowsShown = tbody.querySelectorAll('tr[style="display: table-row;"]');
+    if (rowsShown.length === 0) {
+        alert('Data tidak ditemukan sesuai dengan kriteria yang dimasukkan.');
+    }
+});
+
+
+
+
   </script>
 
 </body>
