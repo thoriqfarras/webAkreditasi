@@ -1,56 +1,65 @@
 <!-- Default Card -->
-<div class="card">
+<div class="card shadow-sm border-0 mb-4">
     <div class="card-body">
-      <h5 class="card-title">Filter Pencarian</h5>
-      <div class="row">
-        <div class="col mb-3">
-          <div class="row">
-            <div class="col">
-              <label class="col-sm-8 col-form-label">Tahun Awal</label>
-              <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
+        <h5 class="card-title text-primary mb-3"><i class="bi bi-funnel-fill me-2"></i>Filter Pencarian</h5>
+        <form>
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-3">
+                    <label for="tahunAwal" class="form-label">Tahun Awal</label>
+                    <select id="tahunAwal" class="form-select" aria-label="Pilih Tahun Awal">
+                        <option selected>--Pilih Tahun--</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        
+                        {{-- @foreach($years as $year)
+                            <option value="{{ $year }}">{{ $year }}</option>
+                        @endforeach --}}
+                    </select>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="tahunAkhir" class="form-label">Tahun Akhir</label>
+                    <select id="tahunAkhir" class="form-select" aria-label="Pilih Tahun Akhir">
+                        <option selected>--Pilih Tahun--</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        
+                        {{-- @foreach($years as $year)
+                            <option value="{{ $year }}">{{ $year }}</option>
+                        @endforeach --}}
+                    </select>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="prodi" class="form-label">Program Studi</label>
+                    <select id="prodi" class="form-select" aria-label="Pilih Program Studi">
+                        <option selected>--Pilih Prodi--</option>
+                        <option value="1">Teknik Informatika</option>
+                        <option value="2">Sistem Informasi</option>
+                        <option value="3">Ilmu Komputer</option>
+                    </select>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="sumberDana" class="form-label">Sumber Dana</label>
+                    <select id="sumberDana" class="form-select" aria-label="Pilih Sumber Dana">
+                        <option selected>--Pilih Sumber Dana--</option>
+                        <option value="1">Internal</option>
+                        <option value="2">Eksternal</option>
+                        <option value="3">Hibah</option>
+                    </select>
+                </div>
             </div>
-            <div class="col">
-              <label class="col-sm-8 col-form-label">Tahun Akhir</label>
-              <div class="col-sm-10">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>--</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-search me-2"></i>Cari</button>
             </div>
-          </div>
-        </div>
-        <div class="col mb-3">
-          <label class="col-sm-2 col-form-label">Prodi</label>
-          <div class="col-sm-10">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col mb-3">
-          <label class="col-sm-2 col-form-label">Prodi</label>
-          <div class="col-sm-10">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-      </div>
+        </form>
     </div>
-  </div><!-- End Default Card -->
+</div><!-- End Default Card -->

@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-lg-12">
 
-              @include('partials.filter')
+              @include('partials.filter') 
 
               @include('partials.table')
 

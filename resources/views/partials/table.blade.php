@@ -3,7 +3,7 @@
       <h5 class="card-title">{{ $tableName }}</h5>
 
       <!-- Table with stripped rows -->
-      <table class="table datatable">
+      <table class="table datatable overflow" >
         <thead>
           <tr>
             @foreach ($mainData[0] as $key => $value)
@@ -31,11 +31,16 @@
                   @endif
                 @endforeach
               </td>
+              <td>{{ $research['Prodi'] }}</td>
               <td>{{ $research['Judul'] }}</td>
               <td>{{ $research['Skema/Sumber Dana'] }}</td>
               <td>{{ $research['Dana'] }}</td>
               <td>{{ $research['Tahun'] }}</td>
-              <td><button class="btn btn-primary">Download</button></td>              
+              <td>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-download me-1"></i>Download
+                </button>
+              </td>               
             </tr>
           @endforeach
         </tbody>
