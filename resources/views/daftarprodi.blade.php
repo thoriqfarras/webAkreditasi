@@ -17,7 +17,7 @@
                         <div class="card h-100 shadow-sm">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title fs-5 mb-3">{{ $prodi['nama'] }}</h5>
-                                <a href="#" class="btn btn-primary mt-auto">Lihat Detail</a>
+                                <a href="{{ route('detailprodi', ['id' => $prodi['id']]) }}" class="btn btn-primary mt-auto">Lihat Detail</a>
                             </div>
                         </div>
                     </div>

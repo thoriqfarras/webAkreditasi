@@ -9,7 +9,7 @@
             @foreach ($mainData[0] as $key => $value)
               <th>{{ $key }}</th>  
             @endforeach
-            <th>File Laporan</th>
+            <th scope="col" rowspan="2" data-sortable="false">File Laporan</th>
           </tr>
         </thead>
         <tbody>
