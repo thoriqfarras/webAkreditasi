@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/daftarprodi">
+        <a class="nav-link collapsed" href="/prodi">
           <i class="bi bi-grid"></i>
           <span>Daftar Program Studi</span>
         </a>
@@ -29,6 +29,12 @@
           <span>Publikasi</span>
         </a>
       </li><!-- End Dashboard Nav -->
+      {{-- <li class="nav-item">
+        <a class="nav-link collapsed" href="/detail">
+          <i class="bi bi-grid"></i>
+          <span>Detail</span>
+        </a>
+      </li><!-- End Dashboard Nav --> --}}
 
     
 

@@ -42,9 +42,7 @@
                     <label for="prodi" class="form-label">Program Studi</label>
                     <select id="prodi" class="form-select" aria-label="Pilih Program Studi">
                         <option selected>--Pilih Prodi--</option>
-                        <option value="1">Teknik Informatika</option>
-                        <option value="2">Sistem Informasi</option>
-                        <option value="3">Ilmu Komputer</option>
+                        
                     </select>
                 </div>
                 <div class="col-md-6 col-lg-3">

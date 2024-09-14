@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('container')
+@container('container')
 <main id="main" class="main">
     <div class="container py-3">
         <h1 class="display-4 text-center mb-4">Daftar Program Studi</h1>
@@ -10,14 +10,14 @@
             <br>Temukan karya ilmiah dan kegiatan akademik sesuai bidang minat Anda.
         </p>
 
-        @if(count($prodis) > 0)
+        @if($prodis->count() > 0)
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 @foreach($prodis as $prodi)
                     <div class="col">
                         <div class="card h-100 shadow-sm">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title fs-5 mb-3">{{ $prodi['nama'] }}</h5>
-                                <a href="{{ route('detailprodi', ['id' => $prodi['id']]) }}" class="btn btn-primary mt-auto">Lihat Detail</a>
+                                <h5 class="card-title fs-5 mb-3">{{ $prodi->nama_prodi }}</h5>
+                                <a href="{{ route('prodi.detailprodi', ['kode_prodi' => $prodi->kode_prodi]) }}" class="btn btn-primary mt-auto">Lihat Detail</a>
                             </div>
                         </div>
                     </div>
@@ -28,4 +28,4 @@
         @endif
     </div>
 </main>
-@endsection
+@endcontainer
