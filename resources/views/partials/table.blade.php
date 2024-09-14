@@ -29,12 +29,13 @@
                   @endforeach
                 </td>
                 <td>
-                  @foreach ($research['Nama Mahasiswa'] as $mahasiswa)
-                    {{ $mahasiswa }}
-                    @if (! $loop->last)
-                      ,
-                    @endif
-                  @endforeach
+                  @if(isset($research['Nama Mahasiswa']) && is_array($research['Nama Mahasiswa']))
+                    @foreach ($research['Nama Mahasiswa'] as $mahasiswa)
+                      {{ $mahasiswa }}@if(!$loop->last),@endif
+                    @endforeach
+                  @else
+                    -
+                  @endif
                 </td>
                 <td>{{ $research['Prodi'] }}</td>
                 <td>{{ $research['Judul'] }}</td>

@@ -66,4 +66,5 @@ class PenelitianController extends Controller
         'mainData' => $penelitian,
       ]);
     }
+    
 }

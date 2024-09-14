@@ -8,7 +8,7 @@
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('prodi.daftarprodi') }}">Program Studi</a></li>
-                    <li class="breadcrumb-item active">{{ $prodi->nama_prodi }}</li>
+                    <li class="breadcrumb-item active">{{ $prodi['Prodi'] }}</li>
                 </ol>
             </nav>
         </div>
@@ -22,7 +22,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $prodi->nama_prodi }}</h5>
+                        <h5 class="card-title">{{ $prodi['Prodi'] }}</h5>
                         
                         <nav>
                             <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
@@ -33,21 +33,24 @@
                         </nav>
 
                         <div class="tab-content" id="nav-tabContent">
+                            <!-- Tab Penelitian -->
                             <div class="tab-pane fade show active" id="nav-penelitian" role="tabpanel" aria-labelledby="nav-penelitian-tab">
-                                <h6>Penelitian</h6>
-                                <!-- Isi dengan konten penelitian -->
+                                @include('partials.table', ['mainData' => $mainData, 'tableName' => $tableName]) <!-- Mengirim data penelitian -->
                             </div>
-
+                        
+                            <!-- Tab Pengabdian -->
                             <div class="tab-pane fade" id="nav-pengabdian" role="tabpanel" aria-labelledby="nav-pengabdian-tab">
                                 <h6>Pengabdian</h6>
-                                <!-- Isi dengan konten pengabdian -->
+                                 <!-- Mengirim data pengabdian -->
                             </div>
-
+                        
+                            <!-- Tab Publikasi -->
                             <div class="tab-pane fade" id="nav-publikasi" role="tabpanel" aria-labelledby="nav-publikasi-tab">
                                 <h6>Publikasi</h6>
-                                <!-- Isi dengan konten publikasi -->
+                                 <!-- Mengirim data publikasi -->
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>

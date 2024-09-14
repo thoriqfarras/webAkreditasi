@@ -10,22 +10,23 @@
             <br>Temukan karya ilmiah dan kegiatan akademik sesuai bidang minat Anda.
         </p>
 
-        @if($prodis->count() > 0)
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                @foreach($prodis as $prodi)
-                    <div class="col">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title fs-5 mb-3">{{ $prodi->nama_prodi }}</h5>
-                                <a href="{{ route('prodi.detailprodi', ['kode_prodi' => $prodi->kode_prodi]) }}" class="btn btn-primary mt-auto">Lihat Detail</a>
-                            </div>
-                        </div>
+        @if(count($prodis) > 0)
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @foreach($prodis as $prodi)
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fs-5 mb-3">{{ $prodi['Prodi'] }}</h5>
+                        <a href="{{ route('prodi.detailprodi', ['kode_prodi' => $prodi['kode_prodi']]) }}" class="btn btn-primary mt-auto">Lihat Detail</a>
                     </div>
-                @endforeach
+                </div>
             </div>
-        @else
-            <p class="text-center fs-5">Tidak ada program studi yang tersedia.</p>
-        @endif
+        @endforeach
+    </div>
+@else
+    <p class="text-center fs-5">Tidak ada program studi yang tersedia.</p>
+@endif
+
     </div>
 </main>
 @endcontainer
